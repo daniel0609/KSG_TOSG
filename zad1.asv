@@ -1,13 +1,9 @@
 function [data, lon, lat] = zad1 (i)
 
 fid = fopen('C:\Users\Daniel\Documents\WorkspaceMatlab\PrzeksztalcanieDanych\Zad1\format_1.geo');
-deg = char(176)
-min = char(39)
-sec = char(34)
-lon = 0;
-lat = 0;
+degrees = char(176)
 if(i == 1)
-    data = fscanf(fid, ['%d' deg '%d' min '%f' sec 'N' '%d' deg '%d' min '%f' sec 'E']);
+    data = fscanf(fid, ['%d' degrees '%d %f  %d %d %f']);
     [a, b] = size(data);
     a=a/6-1;
     for i=0:1:a
